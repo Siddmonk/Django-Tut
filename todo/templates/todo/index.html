@@ -1,0 +1,9 @@
+{% if todoLists %}
+    <ul>
+        {% for olist in todoLists %}
+            <li><a href="{% url 'polls:detail' olist.id %}">{{ olist.listTitle }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
